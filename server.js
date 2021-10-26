@@ -7,7 +7,7 @@ const app = express()
 
 
 // route
-app.get("/pro", (req, res) => {
+app.get("/", (req, res) => {
     res.send("This App is working")
 })
 
