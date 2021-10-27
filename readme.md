@@ -7,6 +7,7 @@ I am building a Super Smash Bros. fighter wishlist using Express, LiquidJS, Mong
 
 ## Models
 
+```
 const fighterSchema = new Schema({
     name: String,
     img: String,
@@ -18,6 +19,7 @@ const fighterSchema = new Schema({
     fsimg: String,
     fs: String,
 })
+```
 
 ## Route Table
 
