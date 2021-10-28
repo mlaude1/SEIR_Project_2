@@ -3,7 +3,7 @@
 
 ## Project Summary
 
-I am building a Super Smash Bros. fighter wishlist using Express, LiquidJS, Mongoose, and CRUD functionality. An index page displays a list of the fighters. Clicking on a fighter opens a show page that displays the fighter along with the fighter's special moveset and Final Smash. 
+I am building a Super Smash Bros. fighter wishlist. An index page displays a list of the fighters. Clicking on a fighter opens a show page that displays the fighter along with the fighter's special moveset and Final Smash. 
 
 ## Models
 
@@ -45,5 +45,8 @@ List your routes in a table
 ## Challenges
 
 
-
 ## List of Technologies
+- Express
+- LiquidJS
+- Mongoose
+- CRUD 
