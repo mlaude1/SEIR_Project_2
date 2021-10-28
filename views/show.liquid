@@ -35,6 +35,9 @@
     .out {
         color: #F34213
     }
+    .edit, .delete {
+        margin-left: 50px;
+    }
 </style>
 
 {% layout "layout.liquid" %}
@@ -63,9 +66,9 @@
     </div>
 </article>
 
-    <a href="/store/{{ product._id }}/edit"><button>EDIT</button></a>
-    <form action="/store/{{ product._id }}?_method=DELETE" method="post">
-    <input type="submit" value="DELETE">
+    <a href="/smash/{{ fighter._id }}/edit" class="edit"><button>EDIT</button></a>
+    <form action="/smash/{{ fighter._id }}?_method=DELETE" method="post">
+    <input class="delete" type="submit" value="DELETE">
     </form>
 
 

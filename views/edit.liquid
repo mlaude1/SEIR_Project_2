@@ -1,0 +1,46 @@
+<style>
+    input {
+        color: #d3d3d3;
+    }
+</style>
+
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+    <form action="/smash/{{ fighter._id }}?_method=PUT" method="post">
+        <fieldset>
+            <legend>Edit {{ fighter.name }}</legend>
+            <label>
+                Name: <input type="text" name="name" placeholder="Who's the fighter?" value="{{fighter.name}}">
+            </label>
+            <label>
+                Image: <input type="text" name="img" placeholder="e.g. https://imgur.com/LEHS8h3.png" value="{{fighter.img}}">
+            </label>
+            <label>
+                Description: <input type="text" name="description" placeholder="Describe the fighter" value="{{fighter.description}}">
+            </label>
+            <label>
+                Neutral B: <input type="text" name="b" placeholder="e.g. Fireball" value="{{fighter.b}}">
+            </label>
+            <label>
+                Side B: <input type="text" name="sideb" placeholder="e.g. Cape" value="{{fighter.sideb}}">
+            </label>
+            <label>
+                Up B: <input type="text" name="upb" placeholder="e.g. Super Jump Punch" value="{{fighter.upb}}">
+            </label>
+            <label>
+                Down B: <input type="text" name="downb" placeholder="e.g. F.L.U.D.D." value="{{fighter.downb}}">
+            </label>
+            <label>
+                Final Smash: <input type="text" name="fs" placeholder="e.g. Mario Finale" value="{{fighter.fs}}">
+            </label>
+            <label>
+                FS Image: <input type="text" name="fsimg" placeholder="e.g. https://imgur.com/LEHS8h3.png" value="{{fighter.fsimg}}">
+            </label>
+        </fieldset>
+        <input type="submit" value="update">
+    </form>
+</div>
+
+{% endblock %}

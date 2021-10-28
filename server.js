@@ -90,6 +90,26 @@ app.get("/smash/seed", (req, res) => {
         downb: 'Swap Artillery',
         fsimg:'',
         fs: 'M12 Light Reconnaissance Warthog'
+      }, {
+        name: 'Crash Bandicoot',
+        img: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fvignette3.wikia.nocookie.net%2Ffantendo%2Fimages%2Fc%2Fc7%2FCrashifiedSmashified.png%2Frevision%2Flatest%3Fcb%3D20160401195714&f=1&nofb=1',
+        description: 'What is Crash even?',
+        b: 'Death Tornado Spin',
+        sideb: 'Hog Wild',
+        upb: 'Bouncing Crates',
+        downb: 'Wumpa Bazooka',
+        fsimg:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fcrashban%2Fimages%2F5%2F53%2FCrash_Bandicoot_Aku_Aku_Invincibility.png%2Frevision%2Flatest%3Fcb%3D20170114032413&f=1&nofb=1',
+        fs: 'Invincible Aku Aku'  
+      }, {
+        name: 'Hello Kitty',
+        img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0035%2F3782%2F9955%2Fproducts%2FHello-Kitty-Decal_1200x1200.jpg%3Fv%3D1541788651&f=1&nofb=1',
+        description: 'Just a friendy kitty',
+        b: 'Scare Little Kids',
+        sideb: 'Cuty Kitty',
+        upb: 'Choking Hairballs',
+        downb: 'Kitty Scratch',
+        fsimg:'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Flittle-girl-military-uniform-26395520.jpg&f=1&nofb=1',
+        fs: 'Little Girl Army'  
       }
     ]
     // delete all 
@@ -124,6 +144,42 @@ app.get("/smash/new", (req, res) => {
 // Create route
 app.post("/smash", (req, res) => {
     Smash.create(req.body)
+    .then((fighter) => {
+        res.redirect("/smash")
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+// Edit Route
+app.get("/smash/:id/edit", (req, res) => {
+    const id = req.params.id
+    Smash.findById(id)
+    .then((fighter) => {
+        res.render("edit.liquid", {fighter})
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+// Update Route
+app.put("/smash/:id", (req, res) => {
+    const id = req.params.id
+    Smash.findByIdAndUpdate(id, req.body, {new: true})
+    .then((fighter) => {
+        res.render("show.liquid", {fighter})
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+// Destroy route
+app.delete("/smash/:id", (req, res) => {
+    const id = req.params.id
+    Smash.findByIdAndRemove(id)
     .then((fighter) => {
         res.redirect("/smash")
     })
