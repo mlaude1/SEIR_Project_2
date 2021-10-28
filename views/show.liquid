@@ -1,0 +1,67 @@
+<style>
+    .back {
+        margin: 30px 0 0 30px;
+    }
+    img {
+        height: 720px;
+        width: 720px;
+        padding: 40px;
+    }
+    .show {
+        /* border: 3px dashed purple; */
+        width: fit-content;
+        display: flex;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        /* box-sizing: border-box; */
+        background-color: white;
+        margin: 50px;
+    }
+    .right {
+        /* border: 3px dashed orange; */
+        padding: 65px 30px 30px 30px;
+    }
+    .name {
+        color: black;
+        font-weight: bold;
+    }
+    .price {
+        color: #05C793;
+    }
+    .out {
+        color: #F34213
+    }
+</style>
+
+{% layout "layout.liquid" %}
+{% block content %}
+
+<a href="/smash"><button class="back">Back Home</button></a>
+
+<article class="show">
+    
+    <img src="{{fighter.img}}" alt="fighter pic"> 
+    <div class="right">
+        <h1 class="name">{{fighter.name}}</h1><br>
+        <h4>{{fighter.description}}</h4>
+        <h4>{{product.description}}</h4><br>
+        <div class="moveset">
+            <p>{{fighter.b}}</p>
+            <p>{{fighter.sideb}}</p>
+            <p>{{fighter.upb}}</p>
+            <p>{{fighter.downb}}</p>
+            <div class="fs">
+                <h3>{{fighter.fs}}</h3>
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+    <a href="/store/{{ product._id }}/edit"><button>EDIT</button></a>
+    <form action="/store/{{ product._id }}?_method=DELETE" method="post">
+    <input type="submit" value="DELETE">
+    </form>
+
+
+{% endblock %}

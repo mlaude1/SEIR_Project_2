@@ -1,0 +1,56 @@
+<style>
+    img {
+        height: 250px;
+        width: 250px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+    .add {
+        border: 2px solid purple;
+        margin: 35px 0 20px 0;
+        text-align: right;
+        margin-left: 43.5%;
+    }
+    .index {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .product {
+        /* border: 2px dashed orange; */
+        border-radius: 8px;
+        margin: 15px 10px;
+        width: fit-content;
+        text-align: center;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    }
+    li {
+        list-style: none;
+    }
+    #name {
+        font-weight: bolder;
+    }
+</style>
+
+{% layout "layout.liquid" %}
+{% block content %}
+
+<a href="/smash/new"><button class="add">Add a new fighter</button></a>
+
+<div class="index">
+    {% for fighter in fighters %}
+        <article class="product">
+            <a href="/smash/{{ fighter._id }}">
+                <img src="{{fighter.img}}" alt="fighter pic"> 
+            </a>
+            <h2 id="name">{{fighter.name}}</h2>
+            <!-- <ul>
+                <li>{{fighter.description}}</li>
+                <li>{{fighter.fs}}</li>
+            </ul> -->
+        </article>
+    {% endfor %}
+</div>
+
+{% endblock %}
