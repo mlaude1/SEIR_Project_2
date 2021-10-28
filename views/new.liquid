@@ -1,0 +1,46 @@
+<style>
+    input {
+        color: #d3d3d3;
+    }
+</style>
+
+{% layout "layout.liquid" %}
+{% block content %}
+
+<div>
+    <form action="/smash" method="post">
+        <fieldset>
+            <legend>Fill in the information below:</legend>
+            <label>
+                Name: <input type="text" name="name" placeholder="Who's the fighter?">
+            </label>
+            <label>
+                Description: <input type="text" name="description" placeholder="Describe the fighter">
+            </label>
+            <label>
+                Image: <input type="text" name="img" placeholder="e.g. https://imgur.com/LEHS8h3.png">
+            </label>
+            <label>
+                Neutral B: <input type="text" name="b" placeholder="e.g. Fireball">
+            </label>
+            <label>
+                Side B: <input type="text" name="sideb" placeholder="e.g. Cape">
+            </label>
+            <label>
+                Up B: <input type="text" name="upb" placeholder="e.g. Super Jump Punch">
+            </label>
+            <label>
+                Down B: <input type="text" name="downb" placeholder="e.g. F.L.U.D.D.">
+            </label>
+            <label>
+                Final Smash: <input type="text" name="fs" placeholder="e.g. Mario Finale">
+            </label>
+            <label>
+                FS Image: <input type="text" name="fsimg" placeholder="e.g. https://imgur.com/LEHS8h3.png">
+            </label>
+        </fieldset>
+        <input type="submit" value="Send Invitation">
+    </form>
+</div>
+
+{% endblock %}

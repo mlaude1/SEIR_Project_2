@@ -53,7 +53,7 @@ app.use(express.static("public"))
 // ROUTES
 
 app.get("/", (req, res) => {
-    res.send("we good?")
+    res.send("go to /smash homie!")
 })
 
 // Seed route
@@ -80,6 +80,16 @@ app.get("/smash/seed", (req, res) => {
         downb: 'spin dash',
         fsimg:'',
         fs: 'maximum heat knuckles attack'
+      }, {
+        name: 'Master Chief',
+        img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-5eb45219601d7c24ef42421f3b53b956-c&f=1&nofb=1',
+        description: 'A man with a plan',
+        b: 'Needler',
+        sideb: 'Sticky Plasma Grenade',
+        upb: 'Jump Pack',
+        downb: 'Swap Artillery',
+        fsimg:'',
+        fs: 'M12 Light Reconnaissance Warthog'
       }
     ]
     // delete all 
@@ -95,7 +105,6 @@ app.get("/smash/seed", (req, res) => {
 })
 
 
-
 // Index route 
 app.get("/smash", (req, res) => {
     Smash.find({})
@@ -107,7 +116,23 @@ app.get("/smash", (req, res) => {
     })
 })
 
-// Show route ❌
+// New route
+app.get("/smash/new", (req, res) => {
+    res.render("new.liquid")
+})
+
+// Create route
+app.post("/smash", (req, res) => {
+    Smash.create(req.body)
+    .then((fighter) => {
+        res.redirect("/smash")
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+// Show route 
 app.get("/smash/:id", (req, res) => {
     const id = req.params.id
     Smash.findById(id)
