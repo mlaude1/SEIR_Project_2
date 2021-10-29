@@ -132,6 +132,8 @@
             background-color: rgb(128, 0, 128);
             display: flex;
             justify-content: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
         .fs .head img {
             /* border: 1px dashed red; */
@@ -210,9 +212,7 @@
                 </div>
                 <section>
                     <div class="name">{{fighter.b}}</div>
-                    <div>
-                        Unleash a quick burst of flame.
-                    </div>
+                    <div>{{fighter.bdet}}</div>
                 </section>
             </div>
             
@@ -223,7 +223,7 @@
                 </div>
                 <section>
                     <div class="name">{{fighter.sideb}}</div>
-                    <div>Charge through light opponents. Causes heavy opponents to stagger back and has a meteor effect if they are budged past the ledge</div>
+                    <div>{{fighter.sidebdet}}</div>
                 </section>
             </div>
 
@@ -234,7 +234,7 @@
                 </div>
                 <section>
                     <div class="name">{{fighter.upb}}</div>
-                    <div>Uses wings to perform an ascending loop, and then glide forward at a gradual descent.</div>
+                    <div>{{fighter.upbdet}}</div>
                 </section>
             </div>
             
@@ -245,7 +245,7 @@
                 </div>
                 <section>
                     <div class="name">{{fighter.downb}}</div>
-                    <div>Horn-dive on enemies. On the ground, he can lift opponents with his horns. Headbash is great for breaking shields.</div>
+                    <div>{{fighter.downbdet}}</div>
                 </section>
             </div>
         </div>
@@ -258,7 +258,7 @@
             <div class="body">
                 <img src="{{fighter.fsimg}}" alt="final smash img">
                 <h3>{{fighter.fs}}</h3>
-                <p>Spyro dashes forward to strike. If it hits, the opponent is trapped in a roller coaster with tracks that end in a crash, while Spyro sits back and relaxes in his sunglasses</p>
+                <p>{{fighter.fsdet}}</p>
             </div>
            
         </section>
