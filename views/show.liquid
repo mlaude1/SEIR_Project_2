@@ -2,7 +2,7 @@
     .back {
         margin: 30px 0 0 30px;
     }
-    img {
+    .model {
         height: 720px;
         width: 720px;
         padding: 40px;
@@ -29,12 +29,74 @@
         color: black;
         font-weight: bold;
     }
-    .price {
-        color: #05C793;
+
+    /* ============================== */
+    .moveset {
+        border: 2px dashed red;
     }
-    .out {
-        color: #F34213
+
+    .neutral, .side, .up, .down {
+        border: 2px solid black;
+        border-radius: 8px;
+        margin: 10px auto;
+        display: flex;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     }
+    .neutral section, .side section, .up section, .down section {
+        width: 100%;
+    }
+    .neutral .name, .side .name, .up .name, .down .name {
+        width: 100%;
+        border-top-right-radius: 5px;
+        color: white;
+        background-color: rgb(159, 27, 27);
+    }
+    .neutral .img, .side .img, .up .img, .down .img {
+        /* border: 5px solid purple; */
+        background-color: rgb(216, 33, 33);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    div>section>div {
+        padding: 5px 5px 5px 15px;
+    }
+        .neutral img {
+            /* border: 1px dashed blue; */
+            /* background-color: red; */
+            width: 30px;
+            box-sizing: unset;
+            margin: 15px;
+        }
+    .side img, .up img, .down img{
+        width: 30px;
+        box-sizing: unset;
+        margin: 0 15px
+    }
+        .side .img {
+            background-color: rgb(43, 117, 227);
+        }
+        .side .name {
+            background-color: rgb(30, 83, 164);
+        }
+        .up .img {
+            background-color: rgb(218, 186, 80);
+        }
+        .up .name {
+            background-color: rgb(199, 161, 34);
+        }
+        .down .img {
+            background-color: rgb(72, 184, 104);
+        }
+        .down .name {
+            background-color: rgb(61, 155, 88);
+        }
+
+
+/* ============================== */
     .edit, .delete {
         margin-left: 50px;
     }
@@ -47,22 +109,65 @@
 
 <article class="show">
     
-    <img src="{{fighter.img}}" alt="fighter img"> 
+    <img class="model" src="{{fighter.img}}" alt="fighter img"> 
     <div class="right">
         <h1 class="name">{{fighter.name}}</h1><br>
         <h4>{{fighter.description}}</h4>
         <h4>{{product.description}}</h4><br>
+        
         <div class="moveset">
-            <p>{{fighter.b}}</p>
-            <p>{{fighter.sideb}}</p>
-            <p>{{fighter.upb}}</p>
-            <p>{{fighter.downb}}</p>
-            <div class="fs">
-                <img src="{{fighter.fsimg}}" alt="final smash img">
-                <h3>{{fighter.fs}}</h3>
+            
+            <div class="neutral">
+                <div class="img">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FiOS7%2FPNG%2F512%2FGaming%2Fxbox_B_filled-512.png&f=1&nofb=1" alt="button">
+                </div>
+                <section>
+                    <div class="name">{{fighter.b}}</div>
+                    <div>
+                        Unleash a quick burst of flame.
+                    </div>
+                </section>
+            </div>
+            
+            <div class="side">
+                <div class="img">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Fmini-arrows-2%2F16%2F62-512.png&f=1&nofb=1" alt="side direction">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FiOS7%2FPNG%2F512%2FGaming%2Fxbox_B_filled-512.png&f=1&nofb=1" alt="button">
+                </div>
+                <section>
+                    <div class="name">{{fighter.sideb}}</div>
+                    <div>Charge through light opponents. Causes heavy opponents to stagger back and has a meteor effect if they are budged past the ledge</div>
+                </section>
+            </div>
+
+            <div class="up">
+                <div class="img">
+                    <img src="https://cdn4.iconfinder.com/data/icons/mini-arrows-2/16/89-512.png" alt="up direction">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FiOS7%2FPNG%2F512%2FGaming%2Fxbox_B_filled-512.png&f=1&nofb=1" alt="button">
+                </div>
+                <section>
+                    <div class="name">{{fighter.upb}}</div>
+                    <div>Uses wings to perform an ascending loop, and then glide forward at a gradual descent.</div>
+                </section>
+            </div>
+            
+            <div class="down">
+                <div class="img">
+                    <img src="https://cdn4.iconfinder.com/data/icons/mini-arrows-2/16/98-1024.png" alt="down direction">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FiOS7%2FPNG%2F512%2FGaming%2Fxbox_B_filled-512.png&f=1&nofb=1" alt="button">
+                </div>
+                <section>
+                    <div class="name">{{fighter.downb}}</div>
+                    <div>Horn-dive on enemies. On the ground, he can lift opponents with his horns. Headbash is great for breaking shields.</div>
+                </section>
             </div>
         </div>
         
+        <div class="fs">
+            <img src="{{fighter.fsimg}}" alt="final smash img">
+            <h3>{{fighter.fs}}</h3>
+        </div>
+
     </div>
 </article>
 

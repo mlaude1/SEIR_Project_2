@@ -110,6 +110,16 @@ app.get("/smash/seed", (req, res) => {
         downb: 'Kitty Scratch',
         fsimg:'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fx%2Flittle-girl-military-uniform-26395520.jpg&f=1&nofb=1',
         fs: 'Little Girl Army'  
+      }, {
+        name: 'Spyro',
+        img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fprofile-database%2Fimages%2Fc%2Fc4%2FSpyro_Transparent.png%2Frevision%2Flatest%3Fcb%3D20180826181919&f=1&nofb=1',
+        description: 'Spyro is a cute energetic young male purple dragon. He is known for his ability to defeat enemies by breathing fire and charging at them, and his ability to glide to otherwise unreachable areas in the game world. Spyro is often accompanied by his best friend Sparx, who is a dragonfly.',
+        b: 'Flame Breath',
+        sideb: 'Horn Charge',
+        upb: 'Glide',
+        downb: 'Headbash',
+        fsimg:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.everyeye.it%2Fimg-notizie%2Fspyro-reignited-trilogy-teaser-trailer-mostra-rinnovato-dragon-shores-v4-351331.jpg&f=1&nofb=1',
+        fs: 'Dragon Shores Coaster' 
       }
     ]
     // delete all 
