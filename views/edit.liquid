@@ -1,13 +1,139 @@
 <style>
-    input {
-        color: #d3d3d3;
+
+/* ======================= */
+
+/* VARIABLES */
+/* :root {
+  --bright-pink: #e74c83;
+  --purple: #735066;
+  --dusty-blue: #74c4cc;
+  --bright-blue: #14bece;
+} */
+
+/* GENERAL */
+
+/* CONTAINERS */
+
+.container {
+    border: 5px dashed purple;
+    /* background: #e7ecef; */
+    border-radius: 0 10px 10px 0;
+    padding: 15px;
+    /* box-sizing: border-box; */
+    /* overflow: auto; */
+    width: 80vw;
+    height: 70vw;
+    /* margin: 50px auto; */
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+}
+
+.fighter {
+    border: 4px dashed orange;
+    width: 50%;
+    padding: 15px;
+    background-color: grey;
+}
+
+.moveset {
+    border: 4px dashed blue;
+    width: 50%;
+    padding: 15px;
+    /* box-sizing: border-box; */
+    overflow: auto;
+    background: #e7ecef;
+}
+
+.fighter h1, .moveset h1 {
+    text-align: center;
+    margin: 10px
+}
+
+input[type="text"], textarea {
+    /* border: unset; */
+    /* border: 2px dashed green !important; */
+    background-color: #f5f3f4 !important;
+}
+
+/* FORMS */
+fieldset.neutral, fieldset.side, fieldset.up, fieldset.down, fieldset.fs {
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 20px 0;
+  border:2px solid rgb(245, 98, 98);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+    fieldset.side {
+        border: 2px solid rgb(43, 117, 227);
     }
+    fieldset.up {
+        border: 2px solid rgb(223, 203, 122);
+    }
+    fieldset.down {
+        border: 2px solid rgb(72, 184, 104);
+    }
+    fieldset.fs {
+        border: 2px solid rgb(182, 14, 182);
+    }
+
+label {
+/* border: 2px dashed blue; */
+/* font-family: 'Oswald'; */
+  font-weight: 200;
+  color: black;
+  display: block;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--dusty-blue)
+}
+
+.neutral input[type="text"]:focus, .neutral textarea:focus {
+    border: 1.5px solid rgb(238, 150, 150)  !important;
+}
+.side input[type="text"]:focus, .side textarea:focus {
+    border: 1.5px solid rgb(114, 179, 235)  !important;
+}
+.up input[type="text"]:focus, .up textarea:focus {
+    border: 1.5px solid rgb(196, 189, 105)  !important;
+}.down input[type="text"]:focus, .down textarea:focus {
+    border: 1.5px solid rgb(81, 177, 88)  !important;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: var(--purple);
+  box-shadow: 2px 2px var(--bright-blue);
+  font-family: 'Oswald';
+  font-size: 1.3em;
+  color: whitesmoke;
+  border: 0px;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+cursor: pointer;
+background: var(--bright-blue);
+box-shadow: 2px 2px var(--purple);
+}
+
+textarea {
+  resize: none;
+  height: 75px;
+}
 </style>
 
 {% layout "layout.liquid" %}
 {% block content %}
 
-<div>
+<!-- <div>
     <form action="/smash/{{ fighter._id }}?_method=PUT" method="post">
         <fieldset>
             <legend>Edit {{ fighter.name }}</legend>
@@ -41,6 +167,68 @@
         </fieldset>
         <input type="submit" value="update">
     </form>
+</div> -->
+
+<div class="container">
+
+    <div class="fighter">
+        <h1>Fighter</h1>
+        <form action="/smash/{{ fighter._id }}?_method=PUT" method="post">    
+        <fieldset>
+            <label>
+                Name: <input type="text" name="name" placeholder="Who's the fighter?" value="{{fighter.name}}">
+            </label>
+            <label>
+                Image: <input type="text" name="img" placeholder="e.g. https://imgur.com/LEHS8h3.png" value="{{fighter.img}}">
+            </label>
+            <label>
+                Description: <input type="text" name="description" placeholder="Describe the fighter" value="{{fighter.description}}">
+            </label>
+
+            <input type="submit" value="update">
+    </div>
+
+    <div class="moveset">
+        <h1>Moveset</h1>
+        <fieldset class="neutral">
+            <label>NEUTRAL B</label>
+            <input type="text" name="b" placeholder="e.g. Fireball" value="{{fighter.b}}">
+            <label>DETAIL</label>
+            <textarea name="bdet">{{fighter.bdet}}</textarea>
+        </fieldset>
+        <fieldset class="side">
+            <label>SIDE B</label>
+            <input type="text" name="sideb" placeholder="e.g. Cape" value="{{fighter.sideb}}">
+            <label>DETAIL</label>
+            <textarea name="sidebdet">{{fighter.sidebdet}}</textarea>
+        </fieldset>
+        <fieldset class="up">
+            <label>UP B</label>
+            <input type="text" name="upb" placeholder="e.g. Super Jump Punch" value="{{fighter.upb}}">
+            <label>DETAIL</label>
+            <textarea name="upbdet">{{fighter.upbdet}}</textarea>
+        </fieldset>
+        <fieldset class="down">
+            <label>DOWN B</label>
+            <input type="text" name="downb" placeholder="e.g. F.L.U.D.D." value="{{fighter.downb}}">
+            <label>DETAIL</label>
+            <textarea name="downbdet">{{fighter.downbdet}}</textarea>
+        </fieldset>
+        
+        <fieldset class="fs">
+            <label>FINAL SMASH</label>
+            <input type="text" name="fs" placeholder="e.g. Mario Finale" value="{{fighter.fs}}">
+            <label>DETAIL</label>
+            <textarea name="fsdet">{{fighter.fsdet}}</textarea>
+            <label>FS IMAGE</label>
+            <input type="text" name="fsimg" placeholder="e.g. https://imgur.com/LEHS8h3.png" value="{{fighter.fsimg}}">
+        </fieldset>
+
+    </form>
+    </div>
 </div>
+  
+<!-- </div> -->
+
 
 {% endblock %}
