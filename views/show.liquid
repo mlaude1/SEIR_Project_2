@@ -2,15 +2,6 @@
     .back {
         margin: 30px 0 0 30px;
     }
-    .model {
-        height: 720px;
-        width: 720px;
-        padding: 40px;
-    }
-    .fs img {
-        height: 300px;
-        width: 300px;
-    }
     .show {
         /* border: 3px dashed purple; */
         width: fit-content;
@@ -21,9 +12,42 @@
         background-color: white;
         margin: 50px;
     }
+
+
+    .left {
+        /* border: 2px dashed blue; */
+        /* padding: 65px 30px 30px 30px; */
+        padding-top: 3%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1.name {
+        /* border: 2px dashed red; */
+        text-align: center;
+        margin: unset;
+        margin-top: 4%;
+    }
+    .model {
+        /* border: 2px dashed red; */
+        height: 720px;
+        width: 720px;
+        padding: 40px;
+    }
+    .left h4 {
+        /* border: 2px dashed red; */
+        padding: 30px;
+    }
+
+
     .right {
-        /* border: 3px dashed orange; */
+        /* border: 6px solid yellow; */
         padding: 65px 30px 30px 30px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .name {
         color: black;
@@ -32,7 +56,7 @@
 
     /* ============================== */
     .moveset {
-        border: 2px dashed red;
+        /* border: 2px dashed red; */
     }
 
     .neutral, .side, .up, .down {
@@ -94,7 +118,70 @@
         .down .name {
             background-color: rgb(61, 155, 88);
         }
+/* ============================== */
+    
+        .fs {
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 10px;
+        }
+        .fs .head {
+            border-bottom: 1.5px solid black;
+            background-color: rgb(128, 0, 128);
+            display: flex;
+            justify-content: center;
+        }
+        .fs .head img {
+            /* border: 1px dashed red; */
+            height: 35px;
+            width: 35px;
+        }
+        .head h4 {
+            /* border: 2px dashed orange; */
+            color: white;
+            font-weight: bold;
+            font-size: 1.6em;
+            margin: unset;
+            text-align: center;
+        }
 
+        div.body {
+            /* border: 2px dashed orange; */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            padding: unset;
+        }
+        .body img {
+            /* border: 2px dashed blue; */
+            height: 100%;
+            width: 100%;
+            max-height: 330px;
+        }
+        .body h3 {
+            /* border: 2px dashed blue; */
+            border-top: 1.5px solid black;
+            border-bottom: 1.5px solid black;
+            width: 100%;
+            text-align: center;
+            background-color: rgb(182, 14, 182);
+            color: white;
+            font-weight: bold;
+            letter-spacing: inherit;
+            margin: unset;
+            padding: 6px;
+        }
+        .body p {
+            /* border: 2px dashed blue; */
+            padding: 20px;
+            font-weight: bold;
+            margin: unset;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
 
 /* ============================== */
     .edit, .delete {
@@ -109,14 +196,14 @@
 
 <article class="show">
     
-    <img class="model" src="{{fighter.img}}" alt="fighter img"> 
-    <div class="right">
-        <h1 class="name">{{fighter.name}}</h1><br>
+    <div class="left">
+        <h1 class="name">{{fighter.name}}</h1>
+        <img class="model" src="{{fighter.img}}" alt="fighter img">     
         <h4>{{fighter.description}}</h4>
-        <h4>{{product.description}}</h4><br>
-        
-        <div class="moveset">
-            
+    </div>
+    
+    <div class="right">
+        <div class="moveset">        
             <div class="neutral">
                 <div class="img">
                     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaxcdn.icons8.com%2FiOS7%2FPNG%2F512%2FGaming%2Fxbox_B_filled-512.png&f=1&nofb=1" alt="button">
@@ -163,12 +250,21 @@
             </div>
         </div>
         
-        <div class="fs">
-            <img src="{{fighter.fsimg}}" alt="final smash img">
-            <h3>{{fighter.fs}}</h3>
-        </div>
+        <section class="fs">
+            <div class="head">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F2e%2Fc5%2F2f%2F2ec52f4b3c8cb2ab991642a386a62b44.png&f=1&nofb=1" alt="smash ball">
+                <h4>Final Smash</h4>
+            </div>
+            <div class="body">
+                <img src="{{fighter.fsimg}}" alt="final smash img">
+                <h3>{{fighter.fs}}</h3>
+                <p>Spyro dashes forward to strike. If it hits, the opponent is trapped in a roller coaster with tracks that end in a crash, while Spyro sits back and relaxes in his sunglasses</p>
+            </div>
+           
+        </section>
 
     </div>
+
 </article>
 
     <a href="/smash/{{ fighter._id }}/edit" class="edit"><button>EDIT</button></a>

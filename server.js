@@ -29,11 +29,16 @@ const fighterSchema = new Schema({
     img: String,
     description: String,
     b: String,
+    bdet: String,
     sideb: String,
+    sidebdet: String,
     upb: String,
+    upbdet: String,
     downb: String,
+    downbdet: String,
     fsimg: String,
     fs: String,
+    fsdet: String
 })
 
 const Smash = model("Smash", fighterSchema)
