@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smash Wishlist</title>
+    <!-- Milligram CSS for Some Default Styling -->
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <!-- CSS Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- OUR CSS AND JS -->
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+    
+    <style>
+      body {
+        /* background-color: #e1dfe4; */
+        background-color: #22223b;
+      }
+      header {
+        /* border: 2px dashed white; */
+        text-align: center;
+        background-color: #f8f9fa;
+        padding: 15px;
+      }
+      h1 {
+        color: #212529;
+        font-weight: bold;
+      }
+      .fever {
+        color: #F34213;
+      }
+      h4 {
+        color: #727272;
+      }
+      .section {
+        /* border: 1px dashed black; */
+      }
+      a {
+        margin: 15px;
+        /* color: red; */
+      }
+      footer {
+          border: 1px dashed black;
+          padding: 15px;
+          margin-top: 30px;
+          background-color: #d3d3d3;
+      }
+
+/* ==================================== */
+      
+    .container {
+        /* border: 5px dashed purple; */
+        margin: 20px auto !important;
+        padding: 15px;
+        width: 80vw;
+        height: 70vw;
+        display: flex;
+    }
+    
+    .fighter {
+        /* border: 4px dashed orange; */
+        width: 50%;
+        padding: 15px;
+        background-color: #e7ecef;
+        overflow: auto;
+        vertical-align: 50%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-right: 2px dashed rgb(213, 209, 209);
+    }
+    
+    .moveset {
+        /* border: 4px dashed blue; */
+        width: 50%;
+        padding: 15px;
+        overflow: auto;
+        background: #e7ecef;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    
+    .fighter h1, .moveset h1 {
+        text-align: center;
+        margin: 10px
+    }
+    
+    /* FORMS */
+    fieldset.neutral, fieldset.side, fieldset.up, fieldset.down, fieldset.fs, .fighter fieldset{
+      border: 2px solid black;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 20px 0;
+      border:2px solid rgb(245, 98, 98);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+    fieldset.side {
+        border: 2px solid rgb(43, 117, 227);
+    }
+    fieldset.up {
+        border: 2px solid rgb(223, 203, 122);
+    }
+    fieldset.down {
+        border: 2px solid rgb(72, 184, 104);
+    }
+    fieldset.fs {
+        border: 2px solid rgb(182, 14, 182);
+    }
+    .fighter fieldset {
+        border: none;
+    }
+    
+    .neutral input[type="text"]:focus, .neutral textarea:focus {
+        border: 1.7px solid rgb(238, 123, 123)  !important;
+    }
+    .side input[type="text"]:focus, .side textarea:focus {
+        border: 1.7px solid rgb(114, 179, 235)  !important;
+    }
+    .up input[type="text"]:focus, .up textarea:focus {
+        border: 1.7px solid rgb(196, 189, 105)  !important;
+    }
+    .down input[type="text"]:focus, .down textarea:focus {
+        border: 1.7px solid rgb(81, 177, 88)  !important;
+    }
+    .fs input[type="text"]:focus, .fs textarea:focus {
+        border: 1.7px solid rgb(145, 63, 186)  !important;
+    }
+    
+    input[type="text"], textarea {
+    background-color: #f5f3f4 !important;
+    }
+    
+    label {
+      font-weight: bold;
+      color: black;
+      display: block;
+    }
+    
+    .fighter input[type="submit"] {
+      width: 50%;
+      color: whitesmoke;
+      margin-left: 23%
+      /* transition: 0.2s ease-in-out; */
+    }
+    
+    input[type="submit"]:hover {
+    /* cursor: pointer; */
+    /* background: var(--bright-blue); */
+    /* box-shadow: 2px 2px var(--purple); */
+    }
+    
+    textarea {
+      resize: none;
+      height: 75px;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>SMASH BROS INVITATIONAL</h1> 
+      <h4>begging Sakurai since Brawl...</h4>
+      <div class="section">
+        <a href="#">Log in</a>
+        <a href="#">Sign up</a>
+        <a href="#">Search</a>
+      </div>
+      
+    </header>
+
+    <main>
+        {% block content %}My default content{% endblock %}
+    </main>
+
+    <footer>
+        Copyright © 2021 Mott Inc. All rights reservered
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sales and Refunds</a>
+    </footer>
+  </body>
+</html>

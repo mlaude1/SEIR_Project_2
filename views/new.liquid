@@ -1,12 +1,12 @@
-<style>
+<!-- <style>
 
     /* ======================= */
     
     /* CONTAINERS */
     .container {
-        border: 5px dashed purple;
+        /* border: 5px dashed purple; */
+        margin: 20px auto !important;
         /* background: #e7ecef; */
-        border-radius: 0 10px 10px 0;
         padding: 15px;
         /* box-sizing: border-box; */
         /* overflow: auto; */
@@ -19,21 +19,25 @@
     }
     
     .fighter {
-        border: 4px dashed orange;
+        /* border: 4px dashed orange; */
         width: 50%;
         padding: 15px;
         background-color: #e7ecef;
         overflow: auto;
         vertical-align: 50%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
     }
     
     .moveset {
-        border: 4px dashed blue;
+        /* border: 4px dashed blue; */
         width: 50%;
         padding: 15px;
         /* box-sizing: border-box; */
         overflow: auto;
         background: #e7ecef;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
     
     .fighter h1, .moveset h1 {
@@ -109,9 +113,9 @@
       resize: none;
       height: 75px;
     }
-    </style>
+</style> -->
 
-{% layout "layout.liquid" %}
+{% layout "form.liquid" %}
 {% block content %}
 
 <!-- <div>
