@@ -161,7 +161,8 @@ textarea {
             <label>IMAGE</label>
                 <input type="text" name="img" placeholder="e.g. https://imgur.com/LEHS8h3.png" value="{{fighter.img}}">
             <label>DESCRIPTION</label>
-            <input type="text" name="description" placeholder="Describe the fighter" value="{{fighter.description}}">
+            <!-- <input type="text" name="description" placeholder="Describe the fighter" value="{{fighter.description}}"> -->
+            <textarea name="description" placeholder="Describe the fighter">{{fighter.description}}</textarea>
         </fieldset>
         <input type="submit" value="update">   
     </div>
