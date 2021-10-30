@@ -220,6 +220,36 @@ app.delete("/smash/:id", (req, res) => {
     })
 })
 
+// ==============UNDER CONSTRUCTION============ 
+app.get("/smash/previous/:id", (req, res) => {
+    console.log('hi')
+    
+    const id = req.params.id
+    console.log(Smash.find({}))
+    
+    Smash.findById(id)
+    .then((fighter) => {
+        res.render("show.liquid", {fighter})
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+app.get("/smash/next", (req, res) => {
+    console.log('hi')
+    console.log(Smash.find({}))
+    Smash.find({})
+    .then((fighters) => {
+        res.render("index.liquid", {fighters})
+    })
+    .catch((error) => {
+        res.json({error})
+    })
+})
+
+// ==============UNDER CONSTRUCTION============ 
+
 // Show route 
 app.get("/smash/:id", (req, res) => {
     const id = req.params.id

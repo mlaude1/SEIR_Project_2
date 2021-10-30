@@ -1,18 +1,33 @@
 <style>
-    .back {
-        margin: 30px 0 0 30px;
+    section.bar {
+        /* border: 2px dashed yellowgreen; */
+        display: flex;
+        justify-content: center;
+        padding-top: 0.6%;
     }
+    #back, #edit {
+        color: white;
+        background-color: rgb(83, 40, 182);
+        border: black;
+        
+    }
+    #back:hover, #edit:hover {
+        color: black;
+        background-color: white;
+    }
+   
     .show {
         /* border: 3px dashed purple; */
-        width: fit-content;
+        /* width: fit-content; */
         display: flex;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: 15px;
         /* box-sizing: border-box; */
         background-color: white;
-        margin: 50px;
+        margin: 0 auto;
+        /* margin: 0 50px; */
+        max-width: 90%
     }
-
 
     .left {
         /* border: 2px dashed blue; */
@@ -57,6 +72,7 @@
     /* ============================== */
     .moveset {
         /* border: 2px dashed red; */
+        max-width: 90%;
     }
 
     .neutral, .side, .up, .down {
@@ -161,7 +177,7 @@
             /* border: 2px dashed blue; */
             height: 100%;
             width: 100%;
-            max-height: 280px;
+            max-height: 230px;
         }
         .body h3 {
             /* border: 2px dashed blue; */
@@ -185,16 +201,23 @@
             font-weight: bold;
         }
 
-/* ============================== */
-    .edit, .delete {
-        margin-left: 50px;
-    }
 </style>
 
 {% layout "layout.liquid" %}
 {% block content %}
 
-<a href="/smash"><button class="back">Back Home</button></a>
+<section class="bar">
+    <a href="/smash"><button id="back">Back Home</button></a>
+
+    <!-- ==============⚠️ UNDER CONSTRUCTION ⚠️============ -->
+    <!-- <a href="/smash/previous/{{ fighter._id }}"><button id="back"><-Previous</button></a>
+    
+    <a href="/smash/next"><button id="back">Next-></button></a> -->
+    <!-- ================================================== -->
+
+    <a href="/smash/{{ fighter._id }}/edit"><button id="edit">EDIT</button></a>
+</section>
+
 
 <article class="show">
     
@@ -266,11 +289,6 @@
     </div>
 
 </article>
-
-    <a href="/smash/{{ fighter._id }}/edit" class="edit"><button>EDIT</button></a>
-    <form action="/smash/{{ fighter._id }}?_method=DELETE" method="post">
-    <input class="delete" type="submit" value="DELETE">
-    </form>
 
 
 {% endblock %}

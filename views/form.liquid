@@ -89,6 +89,35 @@
         border-right: 2px dashed rgb(213, 209, 209);
     }
     
+    #save {
+        color: white;
+        background-color: rgb(83, 40, 182);
+        border: 1px solid rgb(83, 40, 182);
+        
+    }
+    #save:hover{
+        background-color: rgb(125, 83, 225);
+        transition: 0.2s ease;
+    }
+
+    #delete {
+        background-color: red;
+        border: black;
+        margin-top: 15%;
+    }
+    #delete:hover {
+        background-color: white;
+        color: red;
+        border: 1px solid red;
+        transition: 0.2s ease;
+        box-shadow: 0 2px 10px 0 rgba(237, 15, 15, 0.2), 0 3px 10px 0 rgba(255, 2, 2, 0.19);
+    }
+
+    .fighter h1, .moveset h1 {
+        text-align: center;
+        margin: 10px
+    }
+
     .moveset {
         /* border: 4px dashed blue; */
         width: 50%;
@@ -98,13 +127,8 @@
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
     }
-    
-    .fighter h1, .moveset h1 {
-        text-align: center;
-        margin: 10px
-    }
-    
-    /* FORMS */
+
+    /* MOVESET FORM */
     fieldset.neutral, fieldset.side, fieldset.up, fieldset.down, fieldset.fs, .fighter fieldset{
       border: 2px solid black;
       border-radius: 6px;
