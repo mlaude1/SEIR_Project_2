@@ -1,5 +1,5 @@
 <style>
-    img {
+    img.index {
         height: 250px;
         width: 250px;
         margin-top: 5%;
@@ -43,7 +43,7 @@
     {% for fighter in fighters %}
         <article class="product">
             <a href="/smash/{{ fighter._id }}">
-                <img src="{{fighter.img}}" alt="fighter pic"> 
+                <img class="index" src="{{fighter.img}}" alt="fighter pic"> 
             </a>
             <h2 id="name">{{fighter.name}}</h2>
             <!-- <ul>

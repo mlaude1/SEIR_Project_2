@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smash Wishlist</title>
+    <title>Build-a-bro</title>
     <!-- Milligram CSS for Some Default Styling -->
     <!-- Google Fonts -->
     <link
@@ -27,8 +27,12 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
     <!-- OUR CSS AND JS -->
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
     <script src="/app.js" defer></script>
     
     <style>
@@ -41,6 +45,7 @@
         text-align: center;
         background-color: #f8f9fa;
         padding: 15px;
+        height: 108px;
       }
       h1 {
         color: #212529;
@@ -71,14 +76,26 @@
 
   <body>
     <header>
-      <h1>SMASH BROS INVITATIONAL</h1> 
-      <h4>begging Sakurai since Brawl...</h4>
-      <div class="section">
-        <a href="#">Log in</a>
-        <a href="#">Sign up</a>
-        <a href="#">Search</a>
-      </div>
-      
+      <nav>
+        <div class="logo">
+          <h1>BUILD-A-BRO</h1>
+          <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fvignette1.wikia.nocookie.net%2Fnintendo%2Fimages%2F7%2F70%2FSmash_Logo.png%2Frevision%2Flatest%3Fcb%3D20150610044606%26path-prefix%3Den&f=1&nofb=1" alt="invitation letter">
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+          <!-- <li><a href="#">Home</a></li> -->
+          <li><a href="#">Merch</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="closeMenu"><i class="fa fa-times"></i></div>
+          <span class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-github"></i>
+          </span>
+        </ul>
+      </nav>
     </header>
 
     <main>
