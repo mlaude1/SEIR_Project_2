@@ -166,8 +166,9 @@ textarea {
         </fieldset>
         <input id="save" type="submit" value="save">   
 
-        <form class="delete" action="/smash/{{ fighter._id }}?_method=DELETE" method="post">
+        <!-- <form class="delete" action="/smash/{{ fighter._id }}?_method=DELETE" method="post">
             <input id="delete" type="submit" value="DELETE">
+        </form> -->
     </div>
 
     <div class="moveset">
@@ -205,8 +206,12 @@ textarea {
             <label>FS IMAGE</label>
             <input type="text" name="fsimg" placeholder="e.g. https://imgur.com/LEHS8h3.png" value="{{fighter.fsimg}}">
         </fieldset>
-
     </form>
+
+    <form class="delete" action="/smash/{{ fighter._id }}?_method=DELETE" method="post">
+        <input id="delete" type="submit" value="DELETE">
+    </form>
+    
     </div>
 </div>
   
