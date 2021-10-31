@@ -27,7 +27,8 @@ const fighterSchema = new Schema({
     downbdet: String,
     fsimg: String,
     fs: String,
-    fsdet: String
+    fsdet: String,
+    username: String
 })
 
 const Smash = model("Smash", fighterSchema)
