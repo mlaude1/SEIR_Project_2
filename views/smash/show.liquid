@@ -9,7 +9,6 @@
         color: white;
         background-color: rgb(83, 40, 182);
         border: black;
-        
     }
     #back:hover, #edit:hover {
         color: black;
@@ -43,6 +42,8 @@
         text-align: center;
         margin: unset;
         margin-top: 4%;
+        font-family: 'Permanent Marker', cursive;
+        letter-spacing: 2px;
     }
     .model {
         /* border: 2px dashed red; */
@@ -208,13 +209,11 @@
 
 <section class="bar">
     <a href="/smash"><button id="back">Back Home</button></a>
-
     <!-- ==============⚠️ UNDER CONSTRUCTION ⚠️============ -->
     <!-- <a href="/smash/previous/{{ fighter._id }}"><button id="back"><-Previous</button></a>
     
     <a href="/smash/next"><button id="back">Next-></button></a> -->
     <!-- ================================================== -->
-
     <a href="/smash/{{ fighter._id }}/edit"><button id="edit">EDIT</button></a>
 </section>
 

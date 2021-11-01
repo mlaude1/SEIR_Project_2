@@ -49,7 +49,7 @@ db.on("open", () => {
       }, {
         name: 'Hello Kitty',
         img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0035%2F3782%2F9955%2Fproducts%2FHello-Kitty-Decal_1200x1200.jpg%3Fv%3D1541788651&f=1&nofb=1',
-        description: 'Hello Kitty, also known by her full name, Kitty White, is a fictional character portrayed as a female white Japanese Bobtail Cat with a red bow worn on her left ear and often wears blue overalls with a yellow shirt on top. ',
+        description: 'Hello Kitty, also known by her full name, Kitty White, is a fictional character portrayed as a female white Japanese Bobtail Cat with a red bow worn on her left ear and often wears blue overalls with a yellow shirt on top.',
         b: 'Hairball',
         bdet: "Kitty starts to cough up a hairball. The hairball is a sticky projectile that can get on walls, opponents (poisonous), and the ground (becomes a slip trap that's also effective on Kitty). The longer you hold B, the more she coughs.",
         sideb: 'Kitty Cannon',

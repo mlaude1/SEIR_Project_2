@@ -1,3 +1,55 @@
+body {
+    /* background-color: #e1dfe4; */
+    background-color: #22223b;
+  }
+  header {
+    /* border: 2px dashed white; */
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    height: 108px;
+  }
+  h1 {
+    color: #212529;
+    font-weight: bold;
+  }
+  .fever {
+    color: #F34213;
+  }
+  h4 {
+    color: #727272;
+  }
+  .section {
+    /* border: 1px dashed black; */
+  }
+  a {
+    margin: 15px;
+    /* color: red; */
+  }
+
+  body {
+    /* background-color: rgb(16, 18, 63); */
+    background-image: url("https://i.imgur.com/q2cLqJM.png");
+    background-position:center;
+    background-size:cover;
+  }
+
+  footer {
+      /* border: 2px dashed red; */
+      padding: 25px;
+      margin-top: 30px;
+      background-color: #f8f9fa;
+  }
+
+  .flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+/* ============= NAV BAR =================== */
+
 .logo {
     display: flex;
     justify-content: space-between;

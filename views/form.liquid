@@ -29,45 +29,11 @@
     ></script>
     <!-- OUR CSS AND JS -->
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="/app.js" defer></script>
     
     <style>
-      body {
-        /* background-color: #e1dfe4; */
-        background-color: #22223b;
-      }
-      header {
-        /* border: 2px dashed white; */
-        text-align: center;
-        background-color: #f8f9fa;
-        padding: 15px;
-      }
-      h1 {
-        color: #212529;
-        font-weight: bold;
-      }
-      .fever {
-        color: #F34213;
-      }
-      h4 {
-        color: #727272;
-      }
-      .section {
-        /* border: 1px dashed black; */
-      }
-      a {
-        margin: 15px;
-        /* color: red; */
-      }
-      footer {
-          border: 1px dashed black;
-          padding: 15px;
-          margin-top: 30px;
-          background-color: #d3d3d3;
-      }
-
-/* ==================================== */
-      
     .container {
         /* border: 5px dashed purple; */
         margin: 20px auto !important;
@@ -89,6 +55,17 @@
         border-right: 2px dashed rgb(213, 209, 209);
     }
     
+    #create {
+        color: white;
+        background-color: rgb(83, 40, 182);
+        border: 1px solid rgb(83, 40, 182);
+        
+    }
+    #create:hover{
+        background-color: rgb(125, 83, 225);
+        transition: 0.2s ease;
+    }
+
     #save {
         color: white;
         background-color: rgb(83, 40, 182);
@@ -202,14 +179,26 @@
 
   <body>
     <header>
-      <h1>SMASH BROS INVITATIONAL</h1> 
-      <h4>begging Sakurai since Brawl...</h4>
-      <div class="section">
-        <a href="#">Log in</a>
-        <a href="#">Sign up</a>
-        <a href="#">Search</a>
-      </div>
-      
+      <nav>
+        <div class="logo">
+          <h1>BUILD-A-BRO</h1>
+          <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fvignette1.wikia.nocookie.net%2Fnintendo%2Fimages%2F7%2F70%2FSmash_Logo.png%2Frevision%2Flatest%3Fcb%3D20150610044606%26path-prefix%3Den&f=1&nofb=1" alt="invitation letter">
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <ul class="mainMenu">
+          <!-- <li><a href="#">Home</a></li> -->
+          <li><a href="#">Merch</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <div class="closeMenu"><i class="fa fa-times"></i></div>
+          <span class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-github"></i>
+          </span>
+        </ul>
+      </nav>
     </header>
 
     <main>

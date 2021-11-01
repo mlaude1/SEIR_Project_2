@@ -4,12 +4,27 @@
         width: 250px;
         margin-top: 5%;
         margin-bottom: 5%;
-      }
+    }
+    section.bar {
+        /* border: 2px dashed yellowgreen; */
+        display: flex;
+        justify-content: center;
+        padding-top: 0.6%;
+    }
     .add {
         border: 2px solid purple;
         margin: 35px 0 20px 0;
         text-align: right;
         margin-left: 43.5%;
+    }
+    #add, #logout {
+        color: white;
+        background-color: rgb(83, 40, 182);
+        border: black;
+    }
+    #add:hover, #logout:hover {
+        color: black;
+        background-color: white;
     }
     .index {
         display: flex;
@@ -17,27 +32,41 @@
         justify-content: center;
     }
     .product {
-        /* border: 2px dashed orange; */
+        /* border: 5px dashed orange; */
         border-radius: 8px;
         margin: 15px 10px;
-        width: fit-content;
+        max-width: 250px;
         text-align: center;
         background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .product:hover {
+        /* color: red; */
+        transition: 0.2s ease;
+        box-shadow: 0 2px 5px 0 #f2ffe3, 0 3px 5px 0 #f2ffe3;
     }
     li {
         list-style: none;
     }
     #name {
-        font-weight: bolder;
+        background: black;
+        color: white;
+        border: 2px solid black;
+        font-family: 'Permanent Marker', cursive;
+        letter-spacing: 2px;
+        border: 1px solid white;
+        font-size: 1.5em;
+        padding: 3px;
     }
 </style>
 
 {% layout "layout.liquid" %}
 {% block content %}
 
-<a href="/smash/new"><button class="add">Add a new fighter</button></a>
-<a href="/user/logout"><button>Logout</button></a>
+<section class="bar">
+    <a href="/smash/new"><button id="add">Add a new fighter</button></a>
+    <a href="/user/logout"><button id="logout">Logout</button></a>
+</section>
 
 <div class="index">
     {% for fighter in fighters %}

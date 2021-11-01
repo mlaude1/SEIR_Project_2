@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Build-a-bro</title>
+    <title>Build-a-Bro</title>
     <!-- Milligram CSS for Some Default Styling -->
     <!-- Google Fonts -->
     <link
@@ -32,44 +32,9 @@
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
     <script src="/app.js" defer></script>
     
     <style>
-      body {
-        /* background-color: #e1dfe4; */
-        background-color: #22223b;
-      }
-      header {
-        /* border: 2px dashed red; */
-        text-align: center;
-        background-color: #f8f9fa;
-        padding: 15px;
-        height: 108px;
-      }
-      h1 {
-        color: #212529;
-        font-weight: bold;
-      }
-      .fever {
-        color: #F34213;
-      }
-      h4 {
-        color: #727272;
-      }
-      .section {
-        /* border: 1px dashed black; */
-      }
-      a {
-        margin: 15px;
-        /* border: 2px dashed red; */
-      }
-      footer {
-          border: 1px dashed black;
-          padding: 15px;
-          margin-top: 30px;
-          background-color: #d3d3d3;
-      }
     </style>
 
   </head>
@@ -98,9 +63,10 @@
       </nav>
     </header>
 
-    <main>
+    <div class="flex-wrapper">
+      <main>
         {% block content %}My default content{% endblock %}
-    </main>
+      </main>
 
     <footer>
         Copyright © 2021 Mott Inc. All rights reservered
@@ -108,5 +74,6 @@
         <a href="#">Terms of Use</a>
         <a href="#">Sales and Refunds</a>
     </footer>
+    </div>
   </body>
 </html>
