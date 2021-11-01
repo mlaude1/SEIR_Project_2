@@ -34,7 +34,8 @@ app.use(session({
 // ROUTES
 
 app.get("/", (req, res) => {
-    res.render("index.liquid")
+    // res.render("index.liquid")
+    res.send('hello there')
 })
 
 // Register Smash Router
