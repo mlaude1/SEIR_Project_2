@@ -49,8 +49,16 @@ List your routes in a table
 
 - AUTHENTICATION BREAKTHROUGH - carefully manipulated my routes, so they would work. The login and signup pages were functional, but everything was still showing no matter who was logged in. But that’s because I had to add the ‘username’ property in the Schema, and I only found that out by studying the super_fruit objects in MongoDB. Once I added that property to the fighterSchema, it worked. I was proud of myself. 
 
+- Another challenge: having too many CSS properties on top of each other: normalize + milligram, plus not really understanding layout and how the style pages are connected. There was just a lot going on, so I really had to specify and give everything id's. My code itself looks like hot garbage and is not DRY at all. 
+
 ## List of Technologies
 - Express
 - LiquidJS
 - Mongoose
 - CRUD 
+
+## Future additions
+- images for b moves
+- stats? 
+- ‘entire moveset’ (A moves)
+- taunts
