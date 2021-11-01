@@ -1,18 +1,48 @@
+<style>
+    #login {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+        color: white;
+    }
+    #login h3, #login h1, #login h5 {
+        color: white;
+    }
+    #login .user {
+        background-color: white;;
+    }
+    #login #create, #login #signin {
+        color: white;
+        background-color: rgb(83, 40, 182);
+        border: black;
+    }
+    #login #create:hover, #login #signin:hover {
+        color: black;
+        background-color: white;
+    }
+</style>
+
 {% layout "layout.liquid" %}
 {% block content %}
-<div>
-<form action="/user/signup" method="post">
-<fieldset>
-<legend>New User</legend>
-<label>
-    Username: <input type="text" name="username" required/> 
-</label>
-<label>
-    Password: <input type="password" name="password" required/>
-</label>
-<input type="submit" value="Create Account"/>
-</fieldset>
 
-</form>
+<div id="login">
+    <h1>Create your own Smash Bros. characters.</h1>
+    <h3>There's always room for more.</h3>
+    <h5>Create an account to get started.</h5>
+    <form action="/user/signup" method="post">
+        <fieldset>
+            <input class="user" type="text" name="username" placeholder="Username" required/> 
+            <input class="user" type="password" name="password" placeholder="Password" required/>
+            
+        </fieldset>
+        <input id="create" type="submit" value="Create Account"/>
+    </form>
+    <div>
+        Already have an account?
+        <a href="/user/login"><button id="signin">Login</button></a>
+    </div>
 </div>
+
 {% endblock %}
