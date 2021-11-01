@@ -173,6 +173,30 @@
       resize: none;
       height: 75px;
     }
+
+    @media (max-width: 845px) {
+      .container {
+        /* border: 2px dashed orangered; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+      }
+      .fighter, .moveset {
+        width: 100%;
+        margin: 15px;
+      }
+      .fighter {
+        height: 100%;
+        border-radius: 8px;
+        padding: 10%
+      }
+      .moveset {
+        border-radius: 8px;
+        height: 100%;
+      }
+    }
+
     </style>
 
   </head>

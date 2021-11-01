@@ -19,9 +19,6 @@ body {
   h4 {
     color: #727272;
   }
-  .section {
-    /* border: 1px dashed black; */
-  }
   a {
     margin: 15px;
     /* color: red; */
@@ -110,7 +107,7 @@ nav .logo {
     cursor: pointer;
 }
 
-@media(max-width: 800px){
+@media(max-width: 845px){
     nav .mainMenu {
         height: 100vh;
         /* height: 50vh; */
@@ -152,5 +149,13 @@ nav .logo {
     .icons i {
         display: inline-block;
         padding: 12px;
+    }
+    .logo h1 {
+        font-size: 1.5em;
+    }
+    .logo img {
+        height: 1.5em;
+        width: 1.5em;
+        margin-top: 2%;
     }
 }

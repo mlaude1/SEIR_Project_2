@@ -202,6 +202,20 @@
             font-weight: bold;
         }
 
+@media (max-width: 845px) {
+    .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left, .right {
+        width: 100%;
+    }
+    img.model {
+        height: fit-content
+    }
+}
+
 </style>
 
 {% layout "layout.liquid" %}
