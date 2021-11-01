@@ -43,7 +43,11 @@ List your routes in a table
 - The user can edit and delete fighters
 
 ## Challenges
+- Styling the show route took a very long time. I get really particular with the positioning of everything, like having the description of the fighter on the left and their moveset on the right, the positioning of the moveset icons, having the right padding, finding a fixed img size, etc. There were so many things I kept wanting to tweak. The challenge was making flexbox work and knowing which elements to grab. But I felt like I learned a lot about specificity, so that's good. 
 
+- Another big challenge and mistake I did was that I spent so much time on the CSS without doing the MVP first (setting up the authentication/authorization thing, setting up routes in a seperate file in Controllers, etc.) All the routes and connections were inside my ```server.js```. So when I needed to move things around, I was scared to death to do so because it could crash my app. I ended up duplicating my code and setting up another branch
+
+- AUTHENTICATION BREAKTHROUGH - carefully manipulated my routes, so they would work. But everything was still showing no matter who was logged in. But that’s because I had to add the ‘username’ property in the Schema
 
 ## List of Technologies
 - Express
