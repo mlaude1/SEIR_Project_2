@@ -1,5 +1,5 @@
 <style>
-    #login {
+    #signup {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -7,18 +7,18 @@
         padding: 10%;
         color: white;
     }
-    #login h3, #login h1, #login h5 {
+    #signup h3, #signup h1, #signup h5 {
         color: white;
     }
-    #login .user {
+    #signup .user {
         background-color: white;;
     }
-    #login #create, #login #signin {
+    #signup #create, #signup #signin {
         color: white;
         background-color: rgb(83, 40, 182);
         border: black;
     }
-    #login #create:hover, #login #signin:hover {
+    #signup #create:hover, #signup #signin:hover {
         color: black;
         background-color: white;
     }
@@ -27,7 +27,7 @@
 {% layout "layout.liquid" %}
 {% block content %}
 
-<div id="login">
+<div id="signup">
     <h1>Create your own Smash Bros. characters.</h1>
     <h3>There's always room for more.</h3>
     <h5>Create an account to get started.</h5>
@@ -35,7 +35,6 @@
         <fieldset>
             <input class="user" type="text" name="username" placeholder="Username" required/> 
             <input class="user" type="password" name="password" placeholder="Password" required/>
-            
         </fieldset>
         <input id="create" type="submit" value="Create Account"/>
     </form>

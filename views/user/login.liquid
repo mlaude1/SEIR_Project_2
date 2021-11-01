@@ -1,18 +1,62 @@
+<style>
+    #login {
+        color: rgb(189, 189, 189);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-image: url(""); */
+        padding: 6.5%;
+    }
+    #box {
+        /* border: 2px dashed orange; */
+        background: rgba(0,0,0, 0.4);
+        padding: 5% 5% 10% 5%;
+        border: 2px solid rgba(80, 80, 80, 0.564);
+        border-radius: 8px;
+    }
+    #login h1 {
+        color: white;
+        font-size: 2em;
+    }
+    #login .user {
+        background-color: rgb(53, 52, 52);
+        border: none;
+        width: 80%;
+        color: white;
+    }
+    #login .user:focus {
+        background-color: rgb(84, 83, 83);
+    }
+    #login #create, #login #signin {
+        color: white;
+        background-color: rgb(83, 40, 182);
+        border: black;
+    }
+    #login #create:hover, #login #signin:hover {
+        color: black;
+        background-color: white;
+    }
+</style>
+
 {% layout "layout.liquid" %}
 {% block content %}
-<div>
-<form action="/user/login" method="post">
-<fieldset>
-<legend>Login</legend>
-<label>
-    Username: <input type="text" name="username" required/> 
-</label>
-<label>
-    Password: <input type="password" name="password" required/>
-</label>
-<input type="submit" value="Login"/>
-</fieldset>
 
-</form>
+<div id="login">
+    <div id="box">
+        <h1>Sign In</h1>
+        <form action="/user/login" method="post">
+            <fieldset>
+                <input class="user" type="text" name="username" placeholder="Username" required/> 
+                <input class="user" type="password" name="password" placeholder="Password" required/><br>
+            <input id="signin" type="submit" value="Login"/>
+            </fieldset>
+        </form>
+        <div>
+            New to Build-a-Bro?
+            <a href="/user/signup"><button id="create">Signup</button></a>
+        </div>
+    </div>
+    
 </div>
 {% endblock %}

@@ -35,7 +35,7 @@ app.use(session({
 
 app.get("/", (req, res) => {
     // res.render("index.liquid")
-    res.send('hello there')
+    res.render("user/signup.liquid")
 })
 
 // Register Smash Router
